@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>
+      sha-256-hash-from-string
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="Henrik Franciscus Leppä">
+    <style>
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.input--full-width {
+  width: 100%;
+}
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>
+        sha-256-hash-from-string
+      </h1>
+      <footer>
+        <p>
+          <small>
+            Copyright © 2018 Henrik Franciscus Leppä<br>
+            <a href="./LICENSE.md">
+              Licensed under MIT License
+            </a>
+            <br>
+            <a href="https://github.com/henrik-leppa/sha-256-hash-from-string">
+              Fork me on GitHub
+            </a>
+          </small>
+        </p>
+      </footer>
+      <p>
+        <label>
+          Input string:
+          <input type="text" class="input--full-width" id="input-string-input">
+        </label>
+      </p>
+      <p>
+        <label>
+          SHA-256 hash:
+          <input
+            type="text"
+            class="input--full-width"
+            id="sha-256-hash-input"
+            readonly
+          >
+        </label>
+      </p>
+      <p>
+        <button type="button" id="create-hash-button">
+          Create hash
+        </button>
+      </p>
+    </main>
+    <script src="./node_modules/js-sha256/src/sha256.js"></script>
+    <script>
+let inputStringInput = document.querySelector('#input-string-input');
+let sha256HashInput = document.querySelector('#sha-256-hash-input');
+let createHashButton = document.querySelector('#create-hash-button');
+
+createHashButton.addEventListener('click', event => {
+  sha256HashInput.value = sha256(inputStringInput.value);
+});
+    </script>
+  </body>
+</html>
