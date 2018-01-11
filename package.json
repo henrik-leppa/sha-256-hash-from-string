@@ -1,0 +1,19 @@
+{
+  "name": "sha-256-hash-from-string",
+  "version": "1.0.0",
+  "description": "Web page that creates a SHA-256 hash from a string in an input field",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henrik-leppa/sha-256-hash-from-string.git"
+  },
+  "author": "Henrik Franciscus Leppä",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henrik-leppa/sha-256-hash-from-string/issues"
+  },
+  "homepage": "https://github.com/henrik-leppa/sha-256-hash-from-string#readme"
+}
